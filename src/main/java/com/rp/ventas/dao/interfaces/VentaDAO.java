@@ -1,5 +1,7 @@
 package com.rp.ventas.dao.interfaces;
 
-public interface VentaDAO {
+import com.rp.ventas.dao.models.Venta;
+
+public interface VentaDAO extends GenericDAO<Venta>{
 
 }

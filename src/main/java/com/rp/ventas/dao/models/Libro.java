@@ -1,14 +1,43 @@
 package com.rp.ventas.dao.models;
 
-public class Libro {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="libro")
+public class Libro implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue
+	@Column(name="idLibro")
 	private Integer idLibro;
+	
+	@Column(name="nombreLibro")
     private String nombreLibro;
+	
+	@Column(name="descripcion")
     private String descripcion;
+	
+	@Column(name="precio")
     private Double precio;
+	
+	@Column(name="stock")
     private Integer stock;
+	
+	@Column(name="autor")
     private String autor;
+	
+	@Column(name="categoria")
     private Integer categoria;
+	
+	@Column(name="estado", insertable=false)
     private boolean estado;
     
     

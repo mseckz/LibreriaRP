@@ -1,8 +1,25 @@
 package com.rp.ventas.dao.models;
 
-public class TipoPago {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tipopago")
+public class TipoPago implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue
+	@Column(name="idTipo")
 	private Integer idTipo;
+	
+	@Column(name="descripcion")
 	private String descripcion;
 	
 	public Integer getIdTipo() {

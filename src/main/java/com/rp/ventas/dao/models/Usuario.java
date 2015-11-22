@@ -1,13 +1,40 @@
 package com.rp.ventas.dao.models;
 
-public class Usuario {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="usuario")
+public class Usuario implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	@Column(name="idUsuario")
 	private Integer idUsuario;
+	
+	@Column(name="correo")
     private String correo;
+	
+	@Column(name="clave")
     private String clave;
+	
+	@Column(name="dni")
     private String dni;
+	
+	@Column(name="nombre")
     private String nombre;
+	
+	@Column(name="apellidos")
     private String apellidos;
+	
+	@Column(name="estado", insertable=false)
     private boolean estado;
     
 	public Integer getIdUsuario() {

@@ -1,14 +1,7 @@
 package com.rp.ventas.dao.interfaces;
 
-import java.util.List;
-
 import com.rp.ventas.dao.models.Libro;
 
-public interface LibroDAO {
+public interface LibroDAO extends GenericDAO<Libro>{
 	
-	void grabar(Libro libro);
-	
-	Libro buscarPorId(Integer id);
-	
-	List<Libro> listarLibros();
 }

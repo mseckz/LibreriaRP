@@ -1,5 +1,7 @@
 package com.rp.ventas.dao.interfaces;
 
-public interface TipoPagoDAO {
+import com.rp.ventas.dao.models.TipoPago;
+
+public interface TipoPagoDAO extends GenericDAO<TipoPago>{
 
 }

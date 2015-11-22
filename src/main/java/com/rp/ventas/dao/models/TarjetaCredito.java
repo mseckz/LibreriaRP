@@ -1,8 +1,25 @@
 package com.rp.ventas.dao.models;
 
-public class TarjetaCredito {
-	
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tarjetacredito")
+public class TarjetaCredito implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
+	@Id 
+	@GeneratedValue
+	@Column(name="idTarjeta")
 	private Integer idTarjeta;
+	
+	@Column(name="nombreTarjeta")
 	private String nombreTarjeta;
 	
 	
